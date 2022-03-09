@@ -1,12 +1,13 @@
 <h1>Places</h1>
 
-<p>
-  <button type="button" class="btn btn-outline-secondary"><b><a href="/places/new">Add a new place</a></b></button>
-</p>
-
-<ul>
-  <% for place in @places %>
-    <h4><a href="/places/<%= place.id %>"><%= place.name %></a></h4>
+<% if @current_user %>          
+  <p>
+    <button type="button" class="btn btn-outline-secondary"><b><a href="/places/new">Add a new place</a></b></button>
+  </p>
   <% end %>
-</ul>
-
+ 
+    <ul>
+      <% for place in @places %>
+        <h4><a href="/places/<%= place.id %>"><%= place.name %></a></h4>
+      <% end %>
+    </ul>
