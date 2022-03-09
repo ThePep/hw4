@@ -1,9 +1,13 @@
 <h1><%= @place.name %></h1>
 
+<div class="mt-4">
+</div>
+
 <% if @current_user %>          
   <p>
-    <button type="button" class="btn btn-outline-secondary"><b><a href="/posts/new?place_id=<%= @place.id %>">New Post</a></button>
+    <button type="button" class="btn btn-primary"><b><a href="/posts/new?place_id=<%= @place.id %>" class="link-light">New Post</a></button>
   </p>
+  <div class="mt-3">
   <div class="container-fluid">
     <div class="row"> 
       <% for post in @place.posts %>
@@ -15,5 +19,6 @@
     <% end %>
   <% else %>
 <% end %>
+  </div>
   </div>
 </div>
