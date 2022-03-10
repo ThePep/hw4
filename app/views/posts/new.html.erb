@@ -13,6 +13,10 @@
     <%= form.label "posted_on" %>
     <%= form.date_field "posted_on" %>
   </p>
+    <p>
+    <%= form.label "uploaded_image" %>
+    <%= form.file_field "uploaded_image", accept: "image/png,image/jpg,image/jpeg" %>
+  </p>
   <p>
     <%= form.submit "Submit", class: "btn-primary" %>
   </p>
